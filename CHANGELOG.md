@@ -21,6 +21,13 @@ Latest
  * `sunpy.cm.get_cmap` no longer defaults to 'sdoaia94'.
  * Added database url config setting to be setup by default as a sqlite database in the sunpy working directory.
  * Added a few tests for the sunpy.roi module.
+ * Removed now-redundant method for rotating IRIS maps since the functionality exists in Map.rotate()
+ * Provide `__str__` and `__repr__` methods on vso `QueryResponse` deprecate `.show()`
+ * SunPy colormaps are now registered with matplotlib on import of `sunpy.cm`
+ * `sunpy.cm.get_cmap` no longer defaults to 'sdoaia94'
+ * Added database url config setting to be setup by default as a sqlite database in the sunpy working directory
+ * Added a few tests for the sunpy.roi module
+ * Added capability for figure-based tests
  * Refactored mapcube co-alignment functionality.
  * Removed sample data from distribution and added ability to download sample files
  * Require JSOC request data calls have an email address attached.
@@ -37,6 +44,8 @@ Latest
  * map.shape has been replaced with map.dimensions, which is ordered
    x first.
  * map.rsun_arcseconds is now map.rsun_obs as it returns a quantity.
+ * Map properties are now named tuples rather than dictionaries.
+ * MapCube.plot and MapCube.peek now support a user defined plot_function argument for customising the animation.
 
 0.5.0
 -----
